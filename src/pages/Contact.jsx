@@ -19,12 +19,13 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
-        import.meta.env.VITE_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then((result) => {
         alert("Message has sent successfully!");
@@ -33,8 +34,13 @@ export default function Contact() {
           email: "",
           message: "",
         });
+        console.log(result);
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch((err) => {
+        alert("Oops! Something went wrong. Please try again.");
+        console.log(err);
+      });
+    console.log("EmailJS User ID:", import.meta.env.VITE_EMAILJS_USER_ID);
   };
 
   return (
