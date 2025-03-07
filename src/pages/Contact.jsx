@@ -34,13 +34,11 @@ export default function Contact() {
           email: "",
           message: "",
         });
-        console.log(result);
       })
       .catch((err) => {
         alert("Oops! Something went wrong. Please try again.");
         console.log(err);
       });
-    console.log("EmailJS User ID:", import.meta.env.VITE_EMAILJS_USER_ID);
   };
 
   return (
