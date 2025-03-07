@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk";
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translate(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease-in infinite;
+  }
+
+  @keyframes blinking {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .animate-blink {
+    animation: blinking 1s ease infinite;
+  }
+
+  /* @keyframes border-animate {
+    0% {
+      border-radius: 44% 56% 36% 64% / 60% 49% 51% 40%;
+    }
+    10% {
+      border-radius: 32% 68% 34% 66% / 84% 48% 52% 16%;
+    }
+    20% {
+      border-radius: 35% 65% 51% 49% / 73% 34% 66% 27%;
+    }
+    30% {
+      border-radius: 32% 68% 34% 66% / 84% 33% 67% 16%;
+    }
+    40% {
+      border-radius: 21% 79% 51% 49% / 57% 28% 72% 43%;
+    }
+    50% {
+      border-radius: 32% 68% 55% 45% / 67% 21% 79% 33%;
+    }
+    60% {
+      border-radius: 24% 76% 36% 64% / 76% 22% 78% 24%;
+    }
+    70% {
+      border-radius: 25% 75% 22% 78% / 63% 31% 69% 37%;
+    }
+    80% {
+      border-radius: 24% 76% 36% 64% / 60% 49% 51% 40%;
+    }
+    90% {
+      border-radius: 25% 75% 29% 71% / 72% 64% 36% 28%;
+    }
+    100% {
+      border-radius: 44% 56% 36% 64% / 60% 49% 51% 40%;
+    }
+  }
+
+  .custom-border {
+    animation: border-animate 8s ease-in infinite;
+  } */
+
+  /* @keyframes border-animate {
+    0% {
+      border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
+    }
+    15% {
+      border-radius: 35% 65% 45% 55% / 55% 45% 50% 50%;
+    }
+    30% {
+      border-radius: 50% 50% 60% 40% / 40% 60% 55% 45%;
+    }
+    45% {
+      border-radius: 30% 70% 40% 60% / 65% 35% 45% 55%;
+    }
+    60% {
+      border-radius: 45% 55% 50% 50% / 50% 55% 35% 65%;
+    }
+    75% {
+      border-radius: 38% 62% 42% 58% / 58% 42% 60% 40%;
+    }
+    90% {
+      border-radius: 48% 52% 55% 45% / 45% 55% 50% 50%;
+    }
+    100% {
+      border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
+    }
+  }
+
+  .custom-border {
+    animation: border-animate 10s ease-in-out infinite;
+  } */
+
+  /* @keyframes border-animate {
+    0% {
+      border-radius: 45% 55% 50% 50% / 50% 60% 40% 50%;
+    }
+    20% {
+      border-radius: 50% 50% 60% 40% / 55% 45% 50% 50%;
+    }
+    40% {
+      border-radius: 55% 45% 45% 55% / 48% 52% 58% 42%;
+    }
+    60% {
+      border-radius: 50% 50% 55% 45% / 42% 58% 47% 53%;
+    }
+    80% {
+      border-radius: 45% 55% 48% 52% / 60% 40% 50% 50%;
+    }
+    100% {
+      border-radius: 45% 55% 50% 50% / 50% 60% 40% 50%;
+    }
+  }
+
+  .custom-border {
+    animation: border-animate 8s ease-in infinite;
+  } */
+
+  @keyframes border-animate {
+    0% {
+      border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+    }
+    15% {
+      border-radius: 40% 60% 55% 45% / 50% 65% 35% 50%;
+    }
+    30% {
+      border-radius: 55% 45% 35% 65% / 45% 50% 55% 50%;
+    }
+    45% {
+      border-radius: 35% 65% 50% 50% / 60% 45% 40% 55%;
+    }
+    60% {
+      border-radius: 60% 40% 45% 55% / 50% 35% 65% 50%;
+    }
+    75% {
+      border-radius: 48% 52% 38% 62% / 58% 42% 62% 38%;
+    }
+    90% {
+      border-radius: 52% 48% 60% 40% / 40% 55% 45% 60%;
+    }
+    100% {
+      border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+    }
+  }
+
+  .custom-border {
+    animation: border-animate 10s cubic-bezier(0.6, -0.28, 0.735, 0.045)
+      infinite alternate;
+  }
+}
