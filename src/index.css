@@ -167,4 +167,9 @@ body::-webkit-scrollbar {
     animation: border-animate 10s cubic-bezier(0.6, -0.28, 0.735, 0.045)
       infinite alternate;
   }
+
+  /* hero section */
+  .xs-text {
+    @apply [@media(max-width:375px)]:text-[13px];
+  }
 }

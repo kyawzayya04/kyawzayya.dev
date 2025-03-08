@@ -26,7 +26,7 @@ export default function Projects() {
     >
       <div className="max-w-4xl mx-auto px-4 flex flex-col space-y-8">
         {/* title */}
-        <h1 className="text-4xl text-center font-bold mb-8 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
+        <h1 className="[@media(max-width:375px)]:text-3xl [@media(max-width:375px)]:mb-3 text-4xl text-center font-bold mb-8 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
           Featured Projects
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
@@ -34,7 +34,7 @@ export default function Projects() {
             projects.map((project, key) => (
               <div
                 key={key}
-                className="flex flex-col justify-between rounded-xl border-blue-500 border p-8 hover:-translate-y-1 hover:shadow-[2px_2px_8px_rgba(59,130,246,0.2)] transition ease-in"
+                className="[@media(max-width:375px)]:p-6 flex flex-col justify-between rounded-xl border-blue-500 border p-8 hover:-translate-y-1 hover:shadow-[2px_2px_8px_rgba(59,130,246,0.2)] transition ease-in"
               >
                 <div className="overflow-hidden h-[200px] rounded-lg mb-5">
                   <img
@@ -43,15 +43,17 @@ export default function Projects() {
                     className="w-full h-[200px] object-cover border border-white/30 rounded-lg hover:scale-105 transition ease-in"
                   />
                 </div>
-                <h3 className="text-xl bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent font-bold mb-4">
+                <h3 className="[@media(max-width:375px)]:text-lg text-xl bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent font-bold mb-4">
                   {project.title}
                 </h3>
-                <p className="mb-3 text-gray-300/90">{project.description}</p>
+                <p className="[@media(max-width:375px)]:xs-text mb-3 text-gray-300/90">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.categories.map((category, key) => (
                     <span
                       key={key}
-                      className="inline-block bg-gradient-to-r from-blue-600/10 to-cyan-400/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:from-blue-600/20 hover:to-cyan-400/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition cursor-default"
+                      className="[@media(max-width:375px)]:xs-text inline-block bg-gradient-to-r from-blue-600/10 to-cyan-400/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:from-blue-600/20 hover:to-cyan-400/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition cursor-default"
                     >
                       {category}
                     </span>
@@ -62,7 +64,7 @@ export default function Projects() {
                   <a
                     href={project.url}
                     target="_blank"
-                    className="px-6 py-2 bg-gradient-to-r from-blue-600/80 to-cyan-500/80 rounded-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:-translate-y-1 transition ease-in"
+                    className="[@media(max-width:375px)]:xs-text px-6 py-2 bg-gradient-to-r from-blue-600/80 to-cyan-500/80 rounded-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:-translate-y-1 transition ease-in"
                   >
                     View <span className="ml-2"> &#8599;</span>
                   </a>
@@ -70,7 +72,7 @@ export default function Projects() {
               </div>
             ))}
         </div>
-        <p className="text-gray-400 text-center text-sm">
+        <p className="[@media(max-width:375px)]:xs-text text-gray-400 text-center text-sm">
           More projects will be coming soon...
         </p>
       </div>
